@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project>
+  <executable name="dist/default/production/SPI_FLASH_JEDEC-Read-ID-master.production.elf">
+    <memory name="data">
+      <units>bytes</units>
+      <length>24576</length>
+      <used>418</used>
+      <free>24158</free>
+    </memory>
+    <memory name="program">
+      <units>bytes</units>
+      <length>269184</length>
+      <used>11475</used>
+      <free>257709</free>
+    </memory>
+  </executable>
+</project>
