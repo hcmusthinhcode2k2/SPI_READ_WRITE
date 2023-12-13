@@ -74,7 +74,7 @@ void PIN_MANAGER_Initialize (void)
     TRISB = 0xFFFD;
     TRISC = 0xFFFF;
     TRISD = 0xFEAF;
-    TRISE = 0xFBFF;
+    TRISE = 0xFBFB;
 
     /****************************************************************************
      * Setting the Weak Pull Up and Weak Pull Down SFR(s)
@@ -106,17 +106,17 @@ void PIN_MANAGER_Initialize (void)
     ANSELB = 0x009D;
     ANSELC = 0x00CF;
     ANSELD = 0x2C00;
-    ANSELE = 0x000F;
+    ANSELE = 0x000B;
     
     /****************************************************************************
      * Set the PPS
      ***************************************************************************/
     __builtin_write_RPCON(0x0000); // unlock PPS
 
-    RPINR20bits.SDI1R = 0x0047;    //RD7->SPI1:SDI1
-    RPOR18bits.RP68R = 0x0001;    //RD4->UART1:U1TX
     RPINR18bits.U1RXR = 0x0043;    //RD3->UART1:U1RX
+    RPINR20bits.SDI1R = 0x0047;    //RD7->SPI1:SDI1
     RPOR20bits.RP72R = 0x0006;    //RD8->SPI1:SCK1OUT
+    RPOR18bits.RP68R = 0x0001;    //RD4->UART1:U1TX
     RPOR19bits.RP70R = 0x0005;    //RD6->SPI1:SDO1
 
     __builtin_write_RPCON(0x0800); // lock PPS

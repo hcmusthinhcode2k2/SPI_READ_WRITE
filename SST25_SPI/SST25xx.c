@@ -16,7 +16,7 @@
 #elif defined SST25VF016B
 #define MAX_MEM_ADDR    0x1FFFFF 
 #else
-#warning "Please define your flash memory"
+
 #endif
 
 /*********************************************************************COMMANDS*/
@@ -138,7 +138,6 @@ void SST_Read_nByte(uint32_t BAddr, uint32_t len, uint8_t *buffer)// Public func
 uint8_t SST_Read_Byte(uint32_t BAddr)// Public function
 {
     uint8_t data;
-
     SST_Check_Busy();
     sstCMD[0]=SST_FAST_READ_DATA;
     SST_Make_Address(BAddr);

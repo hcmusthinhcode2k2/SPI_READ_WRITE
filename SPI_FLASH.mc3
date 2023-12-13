@@ -15854,11 +15854,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="pubSubSPIMASTERConfigurations"/>
-         <value>838.050302247888</value>
+         <value>9863.519672323893</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="pubSubspiSubscriber"/>
-         <value>1782.4062986405675</value>
+         <value>229.18508577926656</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="spiSubscriber"/>
@@ -15870,7 +15870,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="SPIMASTER" name="validate"/>
-         <value>0.32497081664176775</value>
+         <value>0.2696541779782351</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.PropertyTokenKey" moduleName="SPIMASTER" name="spiConfigurations%0%dataInputSample"/>
@@ -18144,7 +18144,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\system.c</file>
-         <hash>2bfa572d0bd1a595a478e23938e4df6a1ee168c653d51366fc87158af8ab00f0</hash>
+         <hash>df68f15ed2b95afb949aefd35fa6c0afd999917533cb29f03944b8883638925f</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\docs\spi.dox</file>
@@ -18168,15 +18168,15 @@
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.h</file>
-         <hash>66371fb5551656a57b1e867e5ca8349f551dd12c3904c8ca617e0405a20f228a</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\uart1.h</file>
-         <hash>c30d8109da86347c8bad8ded5f3e3995c901b290a364a754a842a6bc6064d6e6</hash>
+         <hash>1b26f88e81f3d9d12fff23e22fd1562630bbeb13c08a314035f368030ae5660a</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\reset.c</file>
          <hash>12e7c81c3c2ca73a42f5ca4653a4a3356d9bc64277ba483ab69a5e43e6e6f869</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\uart1.h</file>
+         <hash>c30d8109da86347c8bad8ded5f3e3995c901b290a364a754a842a6bc6064d6e6</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\uart1.c</file>
@@ -18200,7 +18200,7 @@
       </entry>
       <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>4550a051b2e99e7e229ef78655e71f0fe8688090803d76eb1c745ab488c1eea7</hash>
+         <hash>9a7f3169065862629170545dcb2ea6206db7a18d1e09e0fe2adbc6fb9e07a3ce</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\traps.c</file>

@@ -56,18 +56,63 @@
 #endif
 #include <libpic30.h>
 #include "SST25xx.h"
-
+#include <string.h>
+#include <stdint.h>
+#include <stdio.h>
 int main()
 {
     SYSTEM_Initialize();
     SST_Init();
     while(1)
     {
-        SST_Sector_Erase(0x100);
-        SST_Write_Byte(0x100,200);
-        uint8_t value=SST_Read_Byte(0x100);
-        printf("%02X ", value);
-        printf("\n");
-        __delay_ms(1000); 
+       
+//        SST_Write_Byte(0x100,100);
+//        uint8_t value=SST_Read_Byte(0x100);
+//        uint8_t value1=SST_Read_Byte(0x100);
+//        printf("%02X ", value);
+//        printf("\n");
+//        __delay_ms(1000);
+//        printf("%dX ", value1);
+//        printf("\n");
+//        __delay_ms(1000);
+       
+//        SST_Sector_Erase(0x100);
+//        const char dataWrite1[]= "rpcvn.shop";
+//        uint8_t readBufer[10];
+//        SST_Sector_Erase(0x100);
+//        SST_Write_nByte(0x100,strlen(dataWrite1)+1,dataWrite1);
+//        SST_Read_nByte(0x100,strlen(dataWrite1)+1,readBufer);
+//        printf("Read Data %s",readBufer);
+//        printf("\n");
+//        __delay_ms(1000);
+          uint16_t  address=0x100;
+          uint8_t   dataWrite[]={0xAA,0xAC,0xAD,0xCB};
+          uint8_t   dataLength=sizeof(dataWrite)/sizeof(dataWrite[0]);
+          uint8_t   readBuffer[8];
+          SST_Sector_Erase(address);
+          SST_Write_nByte(address,dataLength,dataWrite);
+          SST_Read_nByte(address,dataLength,readBuffer);
+          SST_Read_Byte(address);
+          for(int i = 0; i < dataLength;i++)
+        {
+               printf("Read Data[%d]: %02X\n", i, readBuffer[i]);
+        }
+        __delay_ms(1000);
+          
+        
+        /*length of array*/
+//        uint32_t address = 0x100; 
+//        uint8_t  dataWrite[] = {0xAA, 0xBB, 0xCC, 0xDD}; 
+//        uint8_t  dataLength = sizeof(dataWrite) / sizeof(dataWrite[0]); 
+//        uint8_t  readBuffer[4];
+//        SST_Sector_Erase(address);
+//        SST_Write_nByte(address, dataLength+1, dataWrite);
+//        SST_Read_nByte(address,  dataLength+1, readBuffer);
+//        for(int i = 0; i < dataLength; i++)
+//        {
+//            printf("Read Data[%d]: %02X\n", i, readBuffer[i]);
+//        }
+//        __delay_ms(1000);
     }
+    return 1;
 }
